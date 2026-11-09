@@ -1,0 +1,40 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "tinycast-confetti",
+  "version": "1.0.0",
+  "title": "Confetti",
+  "description": "Celebrate with native, click-through confetti across your Mac's displays.",
+  "icon": "icon.png",
+  "author": "gonzariosm",
+  "license": "MIT",
+  "platforms": ["macOS"],
+  "categories": ["Fun"],
+  "keywords": ["confetti", "celebrate", "celebration", "party", "tinycast"],
+  "repository": "https://github.com/gonzariosm/tinycast-confetti",
+  "commands": [
+    {
+      "name": "confetti",
+      "title": "Confetti",
+      "description": "Launch a five-second confetti celebration on every display.",
+      "mode": "no-view"
+    }
+  ],
+  "scripts": {
+    "build": "ray build -e dist -o dist --non-interactive",
+    "build:native": "bash scripts/build-native.sh",
+    "build:icon": "swift scripts/make-icon.swift",
+    "typecheck": "tsc --noEmit",
+    "package": "node scripts/package.mjs"
+  },
+  "dependencies": {
+    "@raycast/api": "1.104.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.13.10",
+    "@types/react": "19.0.10",
+    "typescript": "5.8.2"
+  },
+  "overrides": {
+    "minimatch": "11.0.5"
+  }
+}
